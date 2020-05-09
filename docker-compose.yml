@@ -1,0 +1,14 @@
+version: '3'
+services:
+    desktop:
+      restart: unless-stopped
+      container_name: desktop
+      hostname: desktop
+      environment:
+        - LC_ALL=C.UTF-8
+        - TZ=Europe/Berlin
+      ports:
+        - 3389:3389
+      volumes:
+        - /data/share:/data/share
+      build: .
