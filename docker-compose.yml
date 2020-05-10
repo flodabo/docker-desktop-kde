@@ -11,4 +11,6 @@ services:
         - 3389:3389
       volumes:
         - /data/share:/data/share
+      devices:
+        - /dev/dri:/dev/dri
       build: .
